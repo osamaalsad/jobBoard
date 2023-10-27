@@ -46,3 +46,6 @@ group :development do
 
 end
 
+gem "jwt"
+
+gem "bcrypt", "~> 3.1.19"
