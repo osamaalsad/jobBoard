@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :users
   post '/auth/login', to: 'authentication#login'
+  post '/register', to: 'users#create'
 
 end
