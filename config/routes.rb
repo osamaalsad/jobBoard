@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   post '/register', to: 'users#create'
 
+  resources :job_posts
+
 end
