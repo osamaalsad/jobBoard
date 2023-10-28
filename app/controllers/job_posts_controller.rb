@@ -2,7 +2,6 @@ class JobPostsController < ApplicationController
     
     before_action :set_job_post, only: [:show, :update, :destroy]
 
-
     def index
         @job_posts = JobPost.all
         render json: @job_posts
@@ -43,4 +42,6 @@ class JobPostsController < ApplicationController
         def job_post_params
             params.permit(:title, :description)
         end
+
+
 end

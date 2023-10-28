@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     skip_before_action :authenticate_request, only: [:create]
-    before_action :set_user, only: [:show, :update, :destroy]
+    before_action :set_user, only: [:update, :destroy]
+    skip_load_and_authorize_resource :only => [:create, :get_current_user]
 
     def index
         @users = User.all
@@ -9,6 +10,10 @@ class UsersController < ApplicationController
 
     def show
         render json: @user
+    end
+
+    def get_current_user
+        render json: @current_user
     end
 
     def create
