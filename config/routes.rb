@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post '/register', to: 'users#create'
 
   resources :job_posts
+  resources :job_applications
 
 end
