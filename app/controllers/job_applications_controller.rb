@@ -10,6 +10,11 @@ class JobApplicationsController < ApplicationController
     end
 
     def show
+        if @current_user.role == "admin"
+            @job_application.status = "Seen"
+            @job_application.save
+            return render json: @job_application
+        end
         render json: @job_application
     end
 
