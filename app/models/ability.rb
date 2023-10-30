@@ -4,7 +4,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    puts "user role: #{user.role}"
     if user.role == 'jobseeker'
         can :read, JobPost  # Job Seekers can read job posts
         can :create, JobApplication  # Job Seekers can apply to jobs
