@@ -2,6 +2,9 @@ class JobApplicationsController < ApplicationController
     before_action :set_job_application, only: [:show, :update, :destroy]
 
     def index
+        if @current_user.role == "jobseeker"
+           return render json: @current_user.job_applications
+        end
         @job_applications = JobApplication.all
         render json: @job_applications
     end
