@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_28_155803) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_30_175712) do
   create_table "job_applications", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "job_post_id", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_28_155803) do
   end
 
   create_table "job_posts", force: :cascade do |t|
-    t.string "title"
+    t.string "title", default: "", null: false
     t.text "description"
     t.date "date_posted"
     t.integer "user_id", null: false
