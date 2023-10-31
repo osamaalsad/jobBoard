@@ -48,7 +48,7 @@ For detailed installation and setup instructions, please refer to the [Installat
         rails db:migrate
     ```
 
-4. Seed the database:
+4. Seed the database to create admin user:
     ```bash
         rails db:seed
     ```
@@ -57,6 +57,11 @@ For detailed installation and setup instructions, please refer to the [Installat
     ```bash
         rails server
     ```
+
+6. import postman collection and environment:
+    - register user with jobseeker role.
+    - login with user the token will automatically added to the environmet variable.
+
 
 ## Usage
 
